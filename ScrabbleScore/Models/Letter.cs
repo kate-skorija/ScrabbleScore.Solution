@@ -5,7 +5,12 @@ namespace ScrabbleScore.Models
 {
   public class Letter
   {
+    public string UserWord { get; }
 
+    public Letter(string userWord)
+    {
+      UserWord = userWord;
+    }
   }
 }
 

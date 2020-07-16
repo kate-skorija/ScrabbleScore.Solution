@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using System.Collections.Generic;
 using ScrabbleScore.Models;
+using System;
 
 namespace ScrabbleScore.Tests
 {
@@ -10,8 +11,16 @@ namespace ScrabbleScore.Tests
     [TestMethod]
     public void LetterConstructor_CreatesInstanceOfLetter_Letter()
     {
-      Letter newLetter = new Letter();
+      Letter newLetter = new Letter("Hello");
       Assert.AreEqual(typeof(Letter), newLetter.GetType());
+    }
+    [TestMethod]
+    public void GetUserWord_ReturnUserWord_String()
+    {
+      string testWord = "Hello";
+      Letter newLetter = new Letter(testWord);
+      string result = newLetter.UserWord;
+      Assert.AreEqual(testWord, result);
     }
   }
 }
