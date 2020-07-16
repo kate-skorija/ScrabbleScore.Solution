@@ -31,7 +31,7 @@ namespace ScrabbleScore.Tests
       char[] testCharArray = {'H','E','L','L','O'};
       Letter newLetter = new Letter(testWord);
 
-      char[] result = Letter.AssignCharArray(newLetter.UserWord);
+      char[] result = newLetter.AssignCharArray();//newLetter.UserWord
 
       CollectionAssert.AreEqual(testCharArray, result);
     }

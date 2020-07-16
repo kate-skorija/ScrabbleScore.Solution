@@ -11,6 +11,12 @@ namespace ScrabbleScore.Models
     {
       UserWord = userWord;
     }
+    public char[] AssignCharArray()
+    {
+      string upperUserWord = UserWord.ToUpper();
+      char[] userArray = upperUserWord.ToCharArray();
+      return userArray;
+    }
   }
 }
 
