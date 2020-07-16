@@ -41,7 +41,7 @@ namespace ScrabbleScore.Tests
       Word newWord = new Word(testWord);
 
       char[] resultArray = newWord.AssignCharArray();
-      int userPoints = newWord.AssignPoints(resultArray);
+      int userPoints = newWord.AssignPoints();
 
       Assert.AreEqual(testPoints, userPoints);
     }
