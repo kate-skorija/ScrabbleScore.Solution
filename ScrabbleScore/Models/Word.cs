@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ScrabbleScore.Models
 {
-  public class Letter
+  public class Word
   {
     public string UserWord { get; }
 
-    public Letter(string userWord)
+    public Word(string userWord)
     {
       UserWord = userWord;
     }
